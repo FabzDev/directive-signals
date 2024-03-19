@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class PropertiesPageComponent {
 
+
+  fieldUpdated(html: string, value: string){
+    console.log({html}, {value});
+
+
+  }
 }
