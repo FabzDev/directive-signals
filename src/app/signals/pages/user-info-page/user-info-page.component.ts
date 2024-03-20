@@ -1,6 +1,6 @@
 import { Component, OnInit, WritableSignal, computed, inject, signal } from '@angular/core';
 import { UserService } from '../../services/user-service.service';
-import { Data } from '../../interfaces/user-request.interface';
+import { User } from '../../interfaces/user-request.interface';
 
 @Component({
   templateUrl: './user-info-page.component.html',
@@ -8,7 +8,7 @@ import { Data } from '../../interfaces/user-request.interface';
 })
 export class UserInfoPageComponent implements OnInit{
   public user = signal(1);
-  public currentUser =  signal<Data | undefined>(undefined);
+  public currentUser =  signal<User | undefined>(undefined);
   public userWasFound = signal(true);
 
   public fullName = computed<string>( () => {
